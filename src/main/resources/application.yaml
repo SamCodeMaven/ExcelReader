@@ -1,0 +1,26 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  liquibase:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/conductor
+    driver-class-name: org.postgresql.Driver
+    username:
+    password:
+    hikari:
+      minimum-idle: 3
+      idle-timeout: 0
+      maximum-pool-size: 15
+      max-lifetime: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9089
+
+client-manager:
+  url:
+  update:
